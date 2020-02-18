@@ -13,4 +13,10 @@ class SearchFacade
     directions = DirectionsService.new(@location, get_address).search
     Direction.new(directions)
   end
+   def top_three
+    fuel_stations = NearestStationService.new(@location).find_three[:fuel_stations]
+    fuel_stations.map do |station|
+      Station.new(station)
+    end
+   end 
 end 
