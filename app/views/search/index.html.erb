@@ -1,12 +1,22 @@
 <h4>Nearest Station to Me</h4>
 <section class="closest-station">
-  <p class="name"><%= station.name %>
-  <p class="address"><%= station.address %>
-  <p class="fuel-type"><%= station.fuel_type %>
-  <p class="access-times"><%= station.access_times %>
+  <p class="name">Station Name: <%= station.name %>
+  <p class="address">Station Address: <%= station.address %>
+  <p class="fuel-type">Fuel type: <%= station.fuel_type %>
+  <p class="access-times">Access times: <%= station.access_times %>
 </section>
 <section class="directions"> 
-  <p class="distance">Distance of Nearest Station <%= directions.distance%></p>
-  <p class="travel-time">Travel time <%=directions.travel_time %></p>
-  <p class="instructions">Instructions <%= directions.directions%></p>
+  <p class="distance">Distance of Nearest Station: <%= directions.distance%></p>
+  <p class="travel-time">Travel time: <%=directions.travel_time %></p>
+  <p class="instructions">Instructions: <%= directions.directions%></p>
+</section>
+<section class="top-three">
+  <section class="stations">
+    <% top_stations.each do |top| %>
+      <p class="name"> Station Name: <%= top.name %>
+      <p class="address"> Station Address: <%= top.address %>
+      <p class="fuel-type"> Fuel type: <%= top.fuel_type%>
+      <p class="access-times"> Access times: <%= top.access_times%>
+    <% end %>
+  </section>
 </section>
